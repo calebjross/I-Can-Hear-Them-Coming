@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 change; //holds the change based on input axis
 
+    Animator animator;
+
     #endregion
 
     #region Properties
@@ -29,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         myRigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -42,11 +46,23 @@ public class PlayerMovement : MonoBehaviour
         //read player input
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
+        UpdateAnimationAndMove();
         
+    }
+
+    void UpdateAnimationAndMove()
+    {
         //determine if character should move
         if (change != Vector3.zero)
         {
             MoveCharacter();
+            animator.SetFloat("moveX", change.x);
+            animator.SetFloat("moveY", change.y);
+            animator.SetBool("moving", true);
+        }
+        else
+        {
+            animator.SetBool("moving", false);
         }
     }
     /// <summary>
@@ -54,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void MoveCharacter()
     {
-        myRigidBody.MovePosition(transform.position + change * speed * Time.deltaTime);
+        myRigidBody.MovePosition(transform.position + change.normalized * speed * Time.fixedDeltaTime);
     }
 }
     #endregion
