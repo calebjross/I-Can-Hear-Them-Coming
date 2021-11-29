@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SceneChanger
+  - Door
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -40,4 +42,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 839623245
+    locked: 0
+  - name: Floor Deco
+    uniqueID: 2782920275
+    locked: 0
+  - name: Walls
+    uniqueID: 613530453
+    locked: 0
+  - name: Col Objects
+    uniqueID: 4234114855
+    locked: 0
+  - name: Paper
+    uniqueID: 440756419
+    locked: 0
+  - name: Player
+    uniqueID: 1100436959
+    locked: 0
+  - name: Very Top
+    uniqueID: 2447578993
     locked: 0

@@ -16,24 +16,27 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 change; //holds the change based on input axis
 
-    Animator animator;
+    public Animator animator;
 
-    #endregion
-
-    #region Properties
+    public VectorValue startingPosition;
 
     #endregion
 
     #region Methods
+
+    private void Awake()
+    {
+
+    }
 
     /// <summary>
     /// Use this for initialization
     /// </summary>
     void Start()
     {
-        animator = GetComponent<Animator>();
-
         myRigidBody = GetComponent<Rigidbody2D>();
+
+        transform.position = startingPosition.initialValue;
     }
 
     /// <summary>
@@ -47,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         UpdateAnimationAndMove();
-        
+
     }
 
     void UpdateAnimationAndMove()
