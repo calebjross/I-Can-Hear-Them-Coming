@@ -12,6 +12,9 @@ public class OpenDoor : MonoBehaviour
     #region Fields
     public bool isDoorCanBeOpened;
     public bool isTopDoor;
+    public bool isHiddenRoom;
+
+    public Animator animator;
 
     #endregion
 
@@ -42,6 +45,13 @@ public class OpenDoor : MonoBehaviour
                 SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
                 sr.enabled = false;
                 BoxCollider2D bc2d = go.GetComponent<BoxCollider2D>();
+
+                //fades the room in if the room is a hidden room
+                if (isHiddenRoom == true)
+                {
+                    RevealRoom();
+                }
+                
 
                 //if the door is on a horizontal plane, the box collider needs to adjust to allow entrance
                 if (isTopDoor == true)
@@ -86,6 +96,11 @@ public class OpenDoor : MonoBehaviour
         {
             isDoorCanBeOpened = false;
         }
+    }
+
+    public void RevealRoom()
+    {
+        animator.SetBool("Door_opened", true);
     }
 }
     #endregion

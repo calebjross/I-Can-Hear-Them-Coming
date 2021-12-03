@@ -126,7 +126,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.6627451, g: 0.24705882, b: 0.24705882, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000004da20b3253fedfa555bb912427775ffcc368451adf559741
@@ -148,12 +148,12 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.3577814, y: 0.10394573, z: 0}
-  - {x: 0.2924404, y: 0.10521269, z: 0}
-  - {x: 0.33277893, y: 0.508801, z: 0}
-  - {x: 0.25110626, y: 0.63924766, z: 0}
-  - {x: -0.24475956, y: 0.6304467, z: 0}
-  - {x: -0.39438725, y: 0.5, z: 0}
+  - {x: -0.3784771, y: 0.02116251, z: 0}
+  - {x: 0.3752241, y: 0.02932787, z: 0}
+  - {x: 0.39486647, y: 0.56398964, z: 0}
+  - {x: 0.27870083, y: 0.68063974, z: 0}
+  - {x: -0.25165844, y: 0.6856351, z: 0}
+  - {x: -0.4219818, y: 0.55518866, z: 0}
 --- !u!114 &4442622856803304671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f27382b84b36b45b5ad6fc8e4e009f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBox: {fileID: 0}
+  dialogText: {fileID: 0}
+  letterNumber: 0

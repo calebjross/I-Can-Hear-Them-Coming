@@ -25,7 +25,6 @@ public class LevelChanger : MonoBehaviour
 
     public void FadeToLevel(string sceneName)
     {
-        Debug.Log("Level is fading");
         levelToLoadName = sceneName;
         animator.SetTrigger("FadeOut");
     }
@@ -33,6 +32,15 @@ public class LevelChanger : MonoBehaviour
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToLoadName);
+
+    }
+
+    public void Update()
+    {
+        if (Input.GetButtonDown("Action") && SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            FadeToLevel("house-exterior");
+        }
     }
 }
     #endregion

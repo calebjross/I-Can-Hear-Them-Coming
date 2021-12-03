@@ -38,6 +38,12 @@ public class PaperBehavior : MonoBehaviour
         //access components for efficiency
         light2D = GetComponent<Light2D>();
         light2D.enabled = false;
+
+        //deactivates the dialog box for switching scenes
+        if (dialogBox.activeInHierarchy)
+        {
+            dialogBox.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -89,7 +95,7 @@ public class PaperBehavior : MonoBehaviour
                 break;
             case 2:
                 dialog = "Max, if you are reading this, that means I’ve gone into hiding." +
-                    " I can hear them at the door. Find me in the basement.";
+                    " I can hear them at the door. Find me.";
                 break;
             case 3:
                 dialog = "Use as emergency toilet paper.";
