@@ -10,9 +10,12 @@ public class OpenDoor : MonoBehaviour
 {
 
     #region Fields
-    public bool isDoorCanBeOpened;
+    public bool isPlayerHasKey;
+    public bool isDoorRequiresKey;
+
     public bool isTopDoor;
     public bool isHiddenRoom;
+    bool isPlayerInRange;
 
     public Animator animator;
 
@@ -29,7 +32,7 @@ public class OpenDoor : MonoBehaviour
     /// </summary>
     void Start()
     {
-        isDoorCanBeOpened = false;
+        isPlayerHasKey = false;
     }
 
     /// <summary>
@@ -37,9 +40,10 @@ public class OpenDoor : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (isDoorCanBeOpened == true)
+        if (Input.GetButtonDown("Action") && isPlayerInRange == true)
         {
-            if (Input.GetButtonDown("Action") && isDoorCanBeOpened == true)
+
+            if (CheckIfDoorCanBeOpened() == true)
             {
                 GameObject go = FindParentWithTag(gameObject, "Door");
                 SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
@@ -51,7 +55,6 @@ public class OpenDoor : MonoBehaviour
                 {
                     RevealRoom();
                 }
-                
 
                 //if the door is on a horizontal plane, the box collider needs to adjust to allow entrance
                 if (isTopDoor == true)
@@ -66,6 +69,19 @@ public class OpenDoor : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool CheckIfDoorCanBeOpened()
+    {
+        OpenDoor od = GetComponent<OpenDoor>();
+        if (od.isDoorRequiresKey == true && od.isPlayerHasKey == true)
+        {
+            return true;
+        } else if (od.isDoorRequiresKey == false)
+        {
+            return true;
+        }
+        return false;
     }
 
     public static GameObject FindParentWithTag(GameObject childObject, string tag)
@@ -86,7 +102,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //isDoorCanBeOpened = true;
+            isPlayerInRange = true;
         }
     }
 
@@ -94,7 +110,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //isDoorCanBeOpened = false;
+            isPlayerInRange = false;
         }
     }
 
