@@ -13608,13 +13608,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.01
       objectReference: {fileID: 0}
+    - target: {fileID: 3623080839886582295, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
+      propertyPath: isHiddenRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3623080839886582295, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
+      propertyPath: isDoorRequiresKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7872787500348347355, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242287789563506826, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
       propertyPath: m_Name
-      value: Door-Verticle
+      value: Bedroom Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
@@ -32882,13 +32890,25 @@ PrefabInstance:
       propertyPath: isHiddenRoom
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3623080839886582295, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
+      propertyPath: isDoorRequiresKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655228490186341120, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1589575
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655228490186341120, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.028270721
+      objectReference: {fileID: 0}
     - target: {fileID: 7872787500348347355, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242287789563506826, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
       propertyPath: m_Name
-      value: Door-Verticle (1)
+      value: Bathroom Door
       objectReference: {fileID: 0}
     - target: {fileID: 8242287789563506826, guid: 3b553b5f33dd8204e9dfcd34d472584e, type: 3}
       propertyPath: m_IsActive
@@ -46540,7 +46560,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8300417912918569656, guid: 761954b86cc7f5449b8b2f054365ca24, type: 3}
       propertyPath: m_Name
-      value: Key
+      value: Bathroom Key
       objectReference: {fileID: 0}
     - target: {fileID: 8300417912918569656, guid: 761954b86cc7f5449b8b2f054365ca24, type: 3}
       propertyPath: m_IsActive

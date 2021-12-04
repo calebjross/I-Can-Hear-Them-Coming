@@ -45,8 +45,13 @@ public class PotBehavior : MonoBehaviour
     {
         if (Input.GetButtonDown("Action") && isPlayerInRange == true)
         {
-            GameObject key = GameObject.FindGameObjectWithTag("Key");
+            //enable the key image in the UI
+            GameObject key = GameObject.Find("Bathroom Key");
             key.GetComponent<Image>().enabled = true;
+
+            //allow the bathroom door to be unlocked
+            GameObject bathroomDoor = GameObject.Find("Bathroom Door");
+            bathroomDoor.GetComponentInChildren<OpenDoor>().isPlayerHasKey = true;
         }
     }
 
