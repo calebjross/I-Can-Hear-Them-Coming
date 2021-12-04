@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1143322241340553868}
   - component: {fileID: 4442622856803304672}
   - component: {fileID: 4442622856803304670}
-  - component: {fileID: 4442622856803304671}
+  - component: {fileID: 1838117584}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   - {x: 0.27870083, y: 0.68063974, z: 0}
   - {x: -0.25165844, y: 0.6856351, z: 0}
   - {x: -0.4219818, y: 0.55518866, z: 0}
---- !u!114 &4442622856803304671
+--- !u!114 &1838117584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,9 +163,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4547413118708797148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f27382b84b36b45b5ad6fc8e4e009f, type: 3}
+  m_Script: {fileID: 11500000, guid: b894c92ea7ae966438c98b0a833e0ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  letterNumber: 0

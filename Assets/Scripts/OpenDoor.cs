@@ -86,7 +86,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            isDoorCanBeOpened = true;
+            //isDoorCanBeOpened = true;
         }
     }
 
@@ -94,7 +94,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            isDoorCanBeOpened = false;
+            //isDoorCanBeOpened = false;
         }
     }
 

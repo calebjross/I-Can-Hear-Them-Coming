@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6980407225962044101}
   m_Layer: 0
   m_Name: SinglePaper-angled-writing
-  m_TagString: Untagged
+  m_TagString: Readable Paper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
   letterNumber: 0
+  isRead: 0
 --- !u!114 &6980407225962044101
 MonoBehaviour:
   m_ObjectHideFlags: 0

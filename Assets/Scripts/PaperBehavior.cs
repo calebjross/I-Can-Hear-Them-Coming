@@ -22,6 +22,9 @@ public class PaperBehavior : MonoBehaviour
     private string dialog;
     public int letterNumber; //use the inspector to assign an int identifer which will be referenced when assigning text below
 
+    //indicates that the note has been read by the player
+    public bool isRead;
+
     #endregion
 
     #region Properties
@@ -44,6 +47,8 @@ public class PaperBehavior : MonoBehaviour
         {
             dialogBox.SetActive(false);
         }
+
+        isRead = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -82,6 +87,7 @@ public class PaperBehavior : MonoBehaviour
                 dialogBox.SetActive(true);
                 GetLetterText();
                 dialogText.text = dialog;
+                isRead = true;
             }
         }
     }

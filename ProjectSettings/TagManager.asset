@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SceneChanger
   - Door
+  - Readable Paper
+  - Key
   layers:
   - Default
   - TransparentFX

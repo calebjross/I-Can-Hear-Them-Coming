@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1959439509445341686}
   m_Layer: 0
   m_Name: SinglePaper-straight-words
-  m_TagString: Untagged
+  m_TagString: Readable Paper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
