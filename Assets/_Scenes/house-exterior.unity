@@ -5020,7 +5020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.65
+      value: -7.8500004
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5681,6 +5681,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6751135512819821851, guid: b036aecb142699c438c89237dc458e8d, type: 3}
   m_PrefabInstance: {fileID: 935717610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1183772349 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8982197668347559702, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
+  m_PrefabInstance: {fileID: 945113557}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1196211533 stripped
 Transform:
@@ -9387,6 +9392,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6751135512819821851, guid: b036aecb142699c438c89237dc458e8d, type: 3}
   m_PrefabInstance: {fileID: 1207578729}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1964354653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964354656}
+  - component: {fileID: 1964354655}
+  - component: {fileID: 1964354654}
+  m_Layer: 0
+  m_Name: Blood Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1964354654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964354653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a08354c0a961094a8f6d88c6ea30d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1183772349}
+--- !u!61 &1964354655
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964354653}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.63334274}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.846451}
+  m_EdgeRadius: 0
+--- !u!4 &1964354656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964354653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: -10.4298725, z: -23.15919}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1966939077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6751135512819821851, guid: b036aecb142699c438c89237dc458e8d, type: 3}
