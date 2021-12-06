@@ -284,14 +284,30 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d94ce0a91b2525c4e8c0784289acf60d, type: 3}
+    - target: {fileID: 3818701148816758571, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818701148816758571, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4571134024848728136, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
       propertyPath: m_text
       value: "Dear Henry,\r\nI can hear them coming.\r\n\r\nThe stories are true.
         I've seen the monsters myself.\r\n\r\nWe need your help. \r\n\r\nAunt Ethel\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4571134024848728136, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571134024848728136, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
       propertyPath: m_fontSize
-      value: 38.95
+      value: 37.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4899770318847714325, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4899770318847714325, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
       propertyPath: m_IsActive
@@ -381,6 +397,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8074989650432498322, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8074989650435566106, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -388,6 +408,14 @@ PrefabInstance:
     - target: {fileID: 8074989650435566106, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8074989650435566108, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180113775363801024, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
@@ -452,36 +480,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
---- !u!1 &1768462532
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1768462533}
-  m_Layer: 0
-  m_Name: Tutorial
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1768462533
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768462532}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1834124919
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834124919}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 

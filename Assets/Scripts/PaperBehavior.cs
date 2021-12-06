@@ -116,7 +116,13 @@ public class PaperBehavior : MonoBehaviour
                     "3. Buy new pants";
                 break;
             case 6:
-                dialog = "Secret Yakuza Casino/Homeless Camp Entrance, do not flush.";
+                dialog = "Secret Yakuza Casino/Homeless Camp Entrance behind toilet. Do not flush.";
+                break;
+            case 7:
+                dialog = "They are here.";
+                break;
+            case 8:
+                dialog = "This way to the basement";
                 break;
             default:
                 dialog = "There is no text for this letter";

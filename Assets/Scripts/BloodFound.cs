@@ -56,8 +56,8 @@ public class BloodFound : MonoBehaviour
         if (idleTimer.Finished && isArrivedAtBlood == false)
         {
             animator.SetBool("moving", true);
-            animator.speed = 5;
-            float moveSpeed = 7;
+            animator.speed = 1.5f;
+            float moveSpeed = 6;
             playerRigidBody.transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
 
@@ -65,7 +65,8 @@ public class BloodFound : MonoBehaviour
         {
             isArrivedAtBlood = true;
             pm.enabled = true;
-            animator.speed = 1;
+            //animator.speed = 1;
+            pm.speed = 5;
         }
 
     }
