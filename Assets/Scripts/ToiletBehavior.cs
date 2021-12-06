@@ -56,7 +56,6 @@ public class ToiletBehavior : MonoBehaviour
 
         if (transform.localPosition.x >= 17.6f)
         {
-            Debug.Log("This should be stopping");
             transform.localPosition = new Vector2(17.6f,transform.localPosition.y);
             isToiletMoving = false;
             GetComponent<BoxCollider2D>().enabled = false;

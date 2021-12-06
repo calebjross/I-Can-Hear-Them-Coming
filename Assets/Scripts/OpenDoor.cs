@@ -19,6 +19,8 @@ public class OpenDoor : MonoBehaviour
 
     public Animator animator;
 
+    public DoorState doorState;
+
     #endregion
 
     #region Properties
@@ -33,6 +35,11 @@ public class OpenDoor : MonoBehaviour
     void Start()
     {
         isPlayerHasKey = false;
+
+        if (doorState.doorHasBeenOpened == true)
+        {
+            transform.parent.gameObject.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -54,6 +61,7 @@ public class OpenDoor : MonoBehaviour
                 if (isHiddenRoom == true)
                 {
                     RevealRoom();
+                    doorState.doorHasBeenOpened = true;
                 }
 
                 //if the door is on a horizontal plane, the box collider needs to adjust to allow entrance
@@ -117,6 +125,11 @@ public class OpenDoor : MonoBehaviour
     public void RevealRoom()
     {
         animator.SetBool("Door_opened", true);
+
+        if (transform.parent.name == "Bathroom Door")
+        {
+            GameObject.Find("Bathroom Key").SetActive(false);
+        }
     }
 }
     #endregion
