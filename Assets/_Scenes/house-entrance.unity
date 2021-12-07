@@ -11899,7 +11899,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1793639676}
+    m_TransformParent: {fileID: 1932915108}
     m_Modifications:
     - target: {fileID: 126206474807425418, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_Sprite
@@ -11919,19 +11919,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 234471401147311031, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_Name
-      value: SinglePaper-angled-writing (6)
+      value: Back Door sign
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.61
+      value: 2.4799995
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4
+      value: 0.28999996
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11943,15 +11943,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5481003980028500440, guid: e2bc50c5417e3d44091eaecfcac32154, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12830,7 +12830,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1932915108}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &601652286
 BoxCollider2D:
@@ -38967,7 +38967,6 @@ Transform:
   - {fileID: 359618502}
   - {fileID: 1587664727}
   - {fileID: 158269457}
-  - {fileID: 1668492462}
   m_Father: {fileID: 239329189}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41739,6 +41738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 533258454}
+  - {fileID: 1668492462}
   - {fileID: 601652285}
   m_Father: {fileID: 861055408}
   m_RootOrder: 0
@@ -41807,7 +41807,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.2927008}
+  m_Offset: {x: -0.00000047683716, y: -1.2927008}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -41818,7 +41818,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.67498016}
+  m_Size: {x: 1.4982252, y: 0.67498016}
   m_EdgeRadius: 0
 --- !u!114 &1932915111
 MonoBehaviour:
@@ -41832,6 +41832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5be224f96ee87478e7c099b565e771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorState: {fileID: 11400000, guid: 6c95e5428992ec64fa65f60b2bdb87f5, type: 2}
 --- !u!1001 &1933914865
 PrefabInstance:
   m_ObjectHideFlags: 0

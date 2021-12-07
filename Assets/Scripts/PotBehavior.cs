@@ -18,6 +18,8 @@ public class PotBehavior : MonoBehaviour
 
     bool isPlayerInRange;
 
+    public itemState bathroomKey;
+
     #endregion
 
     #region Properties
@@ -43,7 +45,7 @@ public class PotBehavior : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (Input.GetButtonDown("Action") && isPlayerInRange == true)
+        if (Input.GetButtonDown("Action") && isPlayerInRange == true && bathroomKey.hasBeenFound == false)
         {
             //enable the key image in the UI
             GameObject key = GameObject.Find("Bathroom Key");
@@ -52,6 +54,9 @@ public class PotBehavior : MonoBehaviour
             //allow the bathroom door to be unlocked
             GameObject bathroomDoor = GameObject.Find("Bathroom Door");
             bathroomDoor.GetComponentInChildren<OpenDoor>().isPlayerHasKey = true;
+
+            //prevent the key from being found again
+            bathroomKey.hasBeenFound = true;
         }
     }
 
@@ -66,7 +71,7 @@ public class PotBehavior : MonoBehaviour
                 bool read = notes[i].GetComponent<PaperBehavior>().isRead;
 
                 //if the related clue letter has been read, then allow the pot to be interacted with
-                if (ln == 5 && read == true)
+                if (ln == 5 && read == true && bathroomKey.hasBeenFound == false)
                 {
                     isPlayerInRange = true;
                     light2D.enabled = true;

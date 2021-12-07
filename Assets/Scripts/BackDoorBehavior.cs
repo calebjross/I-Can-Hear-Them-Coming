@@ -14,6 +14,9 @@ public class BackDoorBehavior : MonoBehaviour
     BoxCollider2D bc2d;
 
     bool isPlayerInRange;
+
+    public DoorState doorState;
+
     #endregion
 
     #region Methods
@@ -36,7 +39,11 @@ public class BackDoorBehavior : MonoBehaviour
     {
         if (Input.GetButtonDown("Action") && isPlayerInRange == true)
         {
-            sr.enabled = false;
+            if (doorState.doorHasBeenOpened == false)
+            {
+                sr.enabled = false;
+                doorState.doorHasBeenOpened = true;
+            }
         }
     }
 }

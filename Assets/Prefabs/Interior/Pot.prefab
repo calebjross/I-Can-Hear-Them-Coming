@@ -166,3 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b894c92ea7ae966438c98b0a833e0ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bathroomKey: {fileID: 11400000, guid: ceadf7a2d77c93b459b6a2906179c43e, type: 2}

@@ -60,19 +60,21 @@ public class OpenDoor : MonoBehaviour
                 //fades the room in if the room is a hidden room
                 if (isHiddenRoom == true)
                 {
-                    RevealRoom();
                     doorState.doorHasBeenOpened = true;
+                    RevealRoom();
                 }
 
                 //if the door is on a horizontal plane, the box collider needs to adjust to allow entrance
                 if (isTopDoor == true)
                 {
+                    doorState.doorHasBeenOpened = true;
                     bc2d.size = new Vector2(bc2d.size.x, 1.04f);
                 }
 
-                //if th edoor is on a vertical plane, the box collider needs to be deactivated
+                //if the edoor is on a vertical plane, the box collider needs to be deactivated
                 if (isTopDoor == false)
                 {
+                    doorState.doorHasBeenOpened = true;
                     bc2d.enabled = false;
                 }
             }
@@ -126,9 +128,12 @@ public class OpenDoor : MonoBehaviour
     {
         animator.SetBool("Door_opened", true);
 
+        //if unlocking the bathroom door, remove key from UI
         if (transform.parent.name == "Bathroom Door")
         {
-            GameObject.Find("Bathroom Key").SetActive(false);
+
+            GameObject bathroomKey = GameObject.Find("Bathroom Key");
+            bathroomKey.SetActive(false);
         }
     }
 }
