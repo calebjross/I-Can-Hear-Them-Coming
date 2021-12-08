@@ -34,7 +34,7 @@ public class LevelTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            playerStorage.initialValue = playerPosition;
+            playerStorage.initialPlayerPosition = playerPosition;
             levelChanger.FadeToLevel(levelToLoadName);
             
         }

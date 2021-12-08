@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
 
-        transform.position = startingPosition.initialValue;
+        transform.position = startingPosition.initialPlayerPosition;
     }
 
     /// <summary>

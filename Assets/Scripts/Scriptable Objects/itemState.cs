@@ -6,9 +6,18 @@ using UnityEngine;
 /// 
 /// </summary>
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Scriptable Objects/Item State")]
 public class itemState : ScriptableObject
 {
+    //Editor value
+    [SerializeField] private bool baseHasBeenFound = false;
+
+    //Internal variables
     public bool hasBeenFound;
-    
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+
+        hasBeenFound = baseHasBeenFound;
+    }
 }

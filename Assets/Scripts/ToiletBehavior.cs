@@ -19,6 +19,8 @@ public class ToiletBehavior : MonoBehaviour
     bool isPlayerInRange;
     bool isToiletMoving;
 
+    public VectorValue toiletPosition;
+
     #endregion
 
     #region Properties
@@ -37,6 +39,8 @@ public class ToiletBehavior : MonoBehaviour
         light2D.enabled = false;
 
         notes = GameObject.FindGameObjectsWithTag("Readable Paper");
+
+        transform.localPosition = toiletPosition.initialToiletPosition;  //sets the toilet position to the Vector2 stored in the scriptable object
     }
 
     /// <summary>
@@ -51,12 +55,18 @@ public class ToiletBehavior : MonoBehaviour
 
         if (isToiletMoving == true)
         {
+            //moves the toilet
             transform.Translate(Vector3.right * 0.2f * Time.deltaTime);
         }
 
+        //stops the toilet when it's moved to a specific spot
         if (transform.localPosition.x >= 17.6f)
         {
+            //holds the final position of the toilet
             transform.localPosition = new Vector2(17.6f,transform.localPosition.y);
+
+            //sets the Vector2 stored in the scriptable object to the final position of the toilet
+            toiletPosition.initialToiletPosition = new Vector2(17.6f, transform.localPosition.y);
             isToiletMoving = false;
             GetComponent<BoxCollider2D>().enabled = false;
         }

@@ -52,6 +52,7 @@ public class OpenDoor : MonoBehaviour
 
             if (CheckIfDoorCanBeOpened() == true)
             {
+                doorState.doorHasBeenOpened = true;
                 GameObject go = FindParentWithTag(gameObject, "Door");
                 SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
                 sr.enabled = false;
@@ -60,21 +61,18 @@ public class OpenDoor : MonoBehaviour
                 //fades the room in if the room is a hidden room
                 if (isHiddenRoom == true)
                 {
-                    doorState.doorHasBeenOpened = true;
                     RevealRoom();
                 }
 
                 //if the door is on a horizontal plane, the box collider needs to adjust to allow entrance
                 if (isTopDoor == true)
                 {
-                    doorState.doorHasBeenOpened = true;
                     bc2d.size = new Vector2(bc2d.size.x, 1.04f);
                 }
 
                 //if the edoor is on a vertical plane, the box collider needs to be deactivated
                 if (isTopDoor == false)
                 {
-                    doorState.doorHasBeenOpened = true;
                     bc2d.enabled = false;
                 }
             }

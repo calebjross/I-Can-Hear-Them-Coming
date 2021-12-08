@@ -3584,6 +3584,7 @@ MonoBehaviour:
   isTopDoor: 0
   isHiddenRoom: 0
   animator: {fileID: 0}
+  doorState: {fileID: 11400000, guid: 764f5d59044cb844aa1619474af8222a, type: 2}
 --- !u!61 &699113585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5020,11 +5021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8500004
+      value: -50.4
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.61
+      value: -11.01
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.z

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e664164a02bea4f95919f934f0cd37, type: 3}
   m_Name: F1Bedroom
   m_EditorClassIdentifier: 
+  baseDoorHasBeenOpened: 0
   doorHasBeenOpened: 0

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9173d04f9a598748bfd690bcaa86a2c, type: 3}
-  m_Name: Player Position
+  m_Script: {fileID: 11500000, guid: 90e664164a02bea4f95919f934f0cd37, type: 3}
+  m_Name: CabinFrontDoor
   m_EditorClassIdentifier: 
-  initialPlayerPosition: {x: 2.5, y: 0}
-  baseInitialToiletPosition: {x: 16.46, y: -7.66}
-  initialToiletPosition: {x: 16.46, y: -7.66}
+  baseDoorHasBeenOpened: 0
+  doorHasBeenOpened: 0

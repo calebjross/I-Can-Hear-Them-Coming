@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b051cc03758bd9478e947a172e00433, type: 3}
   m_Name: F1Bathroom Key
   m_EditorClassIdentifier: 
-  hasBeenFound: 1
+  baseHasBeenFound: 0
+  hasBeenFound: 0
