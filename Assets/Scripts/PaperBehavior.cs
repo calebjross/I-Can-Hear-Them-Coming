@@ -97,7 +97,7 @@ public class PaperBehavior : MonoBehaviour
         switch (letterNumber)
         {
             case 1:
-                dialog = "The monsters... they have no eyelids. They don’t blink. Always watching.";
+                dialog = "I cannot succumb. I won't succumb.";
                 break;
             case 2:
                 dialog = "Max, if you are reading this, that means I’ve gone into hiding." +
@@ -123,6 +123,24 @@ public class PaperBehavior : MonoBehaviour
                 break;
             case 8:
                 dialog = "This way to the basement";
+                break;
+            case 9:
+                dialog = "If you are reading this, I might be gone already.";
+                break;
+            case 10:
+                dialog = "If you are reading this, I might be (cough) out of cough drops.";
+                break;
+            case 11:
+                dialog = "Please hurry. They won't leave until they taken what they want.";
+                break;
+            case 12:
+                dialog = "Sorry about all these notes on the floor. I lost my tape.";
+                break;
+            case 13:
+                dialog = "I found my tape!";
+                break;
+            case 14:
+                dialog = "WET PAINT";
                 break;
             default:
                 dialog = "There is no text for this letter";
