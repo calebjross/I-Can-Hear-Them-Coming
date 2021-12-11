@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9173d04f9a598748bfd690bcaa86a2c, type: 3}
   m_Name: Player Position
   m_EditorClassIdentifier: 
-  initialPlayerPosition: {x: 2.05, y: 9.13}
-  baseInitialToiletPosition: {x: 16.46, y: -7.66}
+  initialPlayerPosition: {x: 14, y: -11.4}
   initialToiletPosition: {x: 16.46, y: -7.66}

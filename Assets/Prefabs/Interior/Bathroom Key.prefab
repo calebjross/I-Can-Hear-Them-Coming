@@ -53,7 +53,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8300417912918569656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -88,4 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50aa86f268ced419bd2de45de5e34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: {fileID: 11400000, guid: 48065a0764ca92742a4528ad337a6bd6, type: 2}
+  key: {fileID: 11400000, guid: ceadf7a2d77c93b459b6a2906179c43e, type: 2}
+  doorTheKeyGoesTo: {fileID: 0}

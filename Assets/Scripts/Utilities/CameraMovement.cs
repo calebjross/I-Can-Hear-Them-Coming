@@ -30,7 +30,7 @@ public class CameraMovement : MonoBehaviour
     /// <summary>
     /// Use this for initialization
     /// </summary>
-    void Start()
+    void Awake()
     {
         smoothing = 0.1f;
 
@@ -56,10 +56,6 @@ public class CameraMovement : MonoBehaviour
                 }
                 else transform.position = targetPosition;
             }
-        }
-        else
-        {
-            Debug.Log("No target set for main camera");
         }
     }
 }

@@ -3585,6 +3585,7 @@ MonoBehaviour:
   isHiddenRoom: 0
   animator: {fileID: 0}
   doorState: {fileID: 11400000, guid: 764f5d59044cb844aa1619474af8222a, type: 2}
+  keyToTheDoor: {fileID: 0}
 --- !u!61 &699113585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5021,11 +5022,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.4
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.01
+      value: -11.4
       objectReference: {fileID: 0}
     - target: {fileID: 8982197668347559690, guid: 3a146891ac54605489c081d90959e8c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8622,6 +8623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bedroom Key
       objectReference: {fileID: 0}
+    - target: {fileID: 2667127026592802968, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
+      propertyPath: doorTheKeyGoesTo
+      value: 
+      objectReference: {fileID: 2640251468320777640, guid: d7c427788198c35428c7a3a1aade1c31, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
 --- !u!1001 &1696109297
@@ -9980,6 +9985,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8074989649488384714}
     m_Modifications:
+    - target: {fileID: 6371657798630881952, guid: 761954b86cc7f5449b8b2f054365ca24, type: 3}
+      propertyPath: doorTheKeyGoesTo
+      value: 
+      objectReference: {fileID: 6906866149975359455, guid: 7a57c590249cfb74aa68a75ee556b07d, type: 3}
     - target: {fileID: 8300417912918569656, guid: 761954b86cc7f5449b8b2f054365ca24, type: 3}
       propertyPath: m_Name
       value: Bathroom Key
@@ -42436,7 +42445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8074989650435566106, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1e3191206249a540be7ba1947e51e2a, type: 3}
@@ -42474,11 +42483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9069869318756386953, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.47
+      value: 10.18
       objectReference: {fileID: 0}
     - target: {fileID: 9069869318756386953, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.9
+      value: -6.27
       objectReference: {fileID: 0}
     - target: {fileID: 9069869318756386953, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -42516,6 +42525,22 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 945113558}
+    - target: {fileID: 9069869318756386957, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
+      propertyPath: maxPosition.x
+      value: 10.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069869318756386957, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
+      propertyPath: maxPosition.y
+      value: -6.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069869318756386957, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
+      propertyPath: minPosition.x
+      value: -51.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069869318756386957, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
+      propertyPath: minPosition.y
+      value: -8.87
+      objectReference: {fileID: 0}
     - target: {fileID: 9069869318756386958, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
       propertyPath: m_Name
       value: Main Camera

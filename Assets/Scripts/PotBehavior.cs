@@ -78,7 +78,7 @@ public class PotBehavior : MonoBehaviour
                         light2D.enabled = true;
                     }
                 }
-            } else
+            } else if (key.GetComponent<KeyBehavior>().key.hasBeenFound == false)
             {
                 isPlayerInRange = true;
                 light2D.enabled = true;

@@ -41,7 +41,10 @@ public class KeyBehavior : MonoBehaviour
     /// </summary>
     void Update()
     {
-        
+        if (key.hasBeenFound == true)
+        {
+            doorTheKeyGoesTo.GetComponentInChildren<OpenDoor>().isPlayerHasKey = true;
+        }
     }
 }
     #endregion

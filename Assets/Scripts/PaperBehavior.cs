@@ -134,7 +134,7 @@ public class PaperBehavior : MonoBehaviour
                 dialog = "Please hurry. They won't leave until they taken what they want.";
                 break;
             case 12:
-                dialog = "Sorry about all these notes on the floor. I lost my tape.";
+                dialog = "Sorry about all these notes on the floor. I can't find my tape.";
                 break;
             case 13:
                 dialog = "I found my tape!";
