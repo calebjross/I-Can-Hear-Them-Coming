@@ -142,6 +142,9 @@ public class PaperBehavior : MonoBehaviour
             case 14:
                 dialog = "WET PAINT";
                 break;
+            case 15:
+                dialog = "Chili Pot Storage Hall";
+                break;
             default:
                 dialog = "There is no text for this letter";
                 break;

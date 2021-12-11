@@ -21,6 +21,8 @@ public class OpenDoor : MonoBehaviour
 
     public DoorState doorState;
 
+    public GameObject keyToTheDoor;
+
     #endregion
 
     #region Properties
@@ -34,8 +36,6 @@ public class OpenDoor : MonoBehaviour
     /// </summary>
     void Start()
     {
-        isPlayerHasKey = false;
-
         if (doorState.doorHasBeenOpened == true)
         {
             transform.parent.gameObject.SetActive(false);
@@ -125,13 +125,10 @@ public class OpenDoor : MonoBehaviour
     public void RevealRoom()
     {
         animator.SetBool("Door_opened", true);
-
-        //if unlocking the bathroom door, remove key from UI
-        if (transform.parent.name == "Bathroom Door")
+        if (keyToTheDoor != null)
         {
-
-            GameObject bathroomKey = GameObject.Find("Bathroom Key");
-            bathroomKey.SetActive(false);
+            keyToTheDoor.GetComponent<KeyBehavior>().key.hasBeenUsed = true;
+            keyToTheDoor.SetActive(false);
         }
     }
 }

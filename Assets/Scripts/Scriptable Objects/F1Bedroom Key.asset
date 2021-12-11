@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9173d04f9a598748bfd690bcaa86a2c, type: 3}
-  m_Name: Player Position
+  m_Script: {fileID: 11500000, guid: 0b051cc03758bd9478e947a172e00433, type: 3}
+  m_Name: F1Bedroom Key
   m_EditorClassIdentifier: 
-  initialPlayerPosition: {x: 2.05, y: 9.13}
-  baseInitialToiletPosition: {x: 16.46, y: -7.66}
-  initialToiletPosition: {x: 16.46, y: -7.66}
+  baseHasBeenFound: 0
+  hasBeenFound: 0

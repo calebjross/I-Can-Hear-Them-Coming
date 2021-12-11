@@ -11,13 +11,16 @@ public class itemState : ScriptableObject
 {
     //Editor value
     [SerializeField] private bool baseHasBeenFound = false;
+    [SerializeField] private bool baseHasBeenUsed = false;
 
     //Internal variables
     public bool hasBeenFound;
+    public bool hasBeenUsed;
     private void OnEnable()
     {
-        hideFlags = HideFlags.DontUnloadUnusedAsset;
-
         hasBeenFound = baseHasBeenFound;
+        hasBeenUsed = baseHasBeenUsed;
+
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
     }
 }

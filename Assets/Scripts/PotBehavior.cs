@@ -16,9 +16,10 @@ public class PotBehavior : MonoBehaviour
 
     Light2D light2D;
 
+    [SerializeField]
     bool isPlayerInRange;
 
-    public itemState bathroomKey;
+    public GameObject key;
 
     #endregion
 
@@ -45,18 +46,16 @@ public class PotBehavior : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (Input.GetButtonDown("Action") && isPlayerInRange == true && bathroomKey.hasBeenFound == false)
+        if (Input.GetButtonDown("Action") && isPlayerInRange == true && key.GetComponent<KeyBehavior>().key.hasBeenFound == false)
         {
+            //prevent the key from being found again
+            key.GetComponent<KeyBehavior>().key.hasBeenFound = true;
+
             //enable the key image in the UI
-            GameObject key = GameObject.Find("Bathroom Key");
             key.GetComponent<Image>().enabled = true;
 
-            //allow the bathroom door to be unlocked
-            GameObject bathroomDoor = GameObject.Find("Bathroom Door");
-            bathroomDoor.GetComponentInChildren<OpenDoor>().isPlayerHasKey = true;
-
-            //prevent the key from being found again
-            bathroomKey.hasBeenFound = true;
+            //allow the door to be unlocked
+            key.GetComponent<KeyBehavior>().doorTheKeyGoesTo.GetComponentInChildren<OpenDoor>().isPlayerHasKey = true;
         }
     }
 
@@ -64,18 +63,25 @@ public class PotBehavior : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //check all letters to see if the related clue letter has been read
-            for (int i = 0; i < notes.Length; i++)
+            if (gameObject.name == "Kitchen Pot")
             {
-                int ln = notes[i].GetComponent<PaperBehavior>().letterNumber;
-                bool read = notes[i].GetComponent<PaperBehavior>().isRead;
-
-                //if the related clue letter has been read, then allow the pot to be interacted with
-                if (ln == 5 && read == true && bathroomKey.hasBeenFound == false)
+                //check all letters to see if the related clue letter has been read
+                for (int i = 0; i < notes.Length; i++)
                 {
-                    isPlayerInRange = true;
-                    light2D.enabled = true;
+                    int ln = notes[i].GetComponent<PaperBehavior>().letterNumber;
+                    bool read = notes[i].GetComponent<PaperBehavior>().isRead;
+
+                    //if the related clue letter has been read, then allow the pot to be interacted with
+                    if (ln == 5 && read == true && key.GetComponent<KeyBehavior>().key.hasBeenFound == false)
+                    {
+                        isPlayerInRange = true;
+                        light2D.enabled = true;
+                    }
                 }
+            } else
+            {
+                isPlayerInRange = true;
+                light2D.enabled = true;
             }
         }
     }
