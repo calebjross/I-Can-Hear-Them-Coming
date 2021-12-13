@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D myRigidBody;
 
-    Vector3 change; //holds the change based on input axis
+    public Vector3 change; //holds the change based on input axis
 
     public Animator animator;
 

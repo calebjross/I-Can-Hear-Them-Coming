@@ -14,9 +14,15 @@ public class BloodFound : MonoBehaviour
     public Animator animator;
     Rigidbody2D playerRigidBody;
 
-    bool isArrivedAtBlood;
+    public bool isArrivedAtBlood;
 
     Timer idleTimer;
+    Timer bloodWaitTimer;
+
+    public GameObject dialogbox;
+
+    public itemState bloodTriggerHasBeenTriggered;
+
     #endregion
 
     #region Properties
@@ -38,16 +44,19 @@ public class BloodFound : MonoBehaviour
 
         //configure idle timer
         idleTimer = gameObject.AddComponent<Timer>();
+        bloodWaitTimer = gameObject.AddComponent<Timer>();
         idleTimer.Duration = 0.5f;
+        bloodWaitTimer.Duration = 0.5f;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && bloodTriggerHasBeenTriggered.hasBeenUsed == false)
         {
             pm.enabled = false;
             animator.SetBool("moving", false);
             idleTimer.Run();
+            pm.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 
@@ -55,20 +64,38 @@ public class BloodFound : MonoBehaviour
     {
         if (idleTimer.Finished && isArrivedAtBlood == false)
         {
+            pm.transform.GetChild(0).gameObject.SetActive(false);
             animator.SetBool("moving", true);
             animator.speed = 1.5f;
             float moveSpeed = 6;
             playerRigidBody.transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
 
-        if (playerRigidBody.transform.position.x <= -7.85)
+        if (bloodWaitTimer.Finished && isArrivedAtBlood == true)
+        {
+            pm.enabled = true;
+            pm.speed = 5;
+            animator.SetBool("moving", true);
+
+            if (Input.GetButtonDown("Action")==true || Input.GetAxisRaw("Horizontal")!=0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                
+                dialogbox.SetActive(false);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player" && bloodTriggerHasBeenTriggered.hasBeenUsed == false)
         {
             isArrivedAtBlood = true;
-            pm.enabled = true;
-            //animator.speed = 1;
-            pm.speed = 5;
+            animator.SetBool("moving", false);
+            bloodWaitTimer.Run();
+            dialogbox.SetActive(true);
+            GetComponent<BoxCollider2D>().enabled = false;
+            bloodTriggerHasBeenTriggered.hasBeenUsed = true;
         }
-
     }
 }
     #endregion

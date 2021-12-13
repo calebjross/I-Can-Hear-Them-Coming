@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 32
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b051cc03758bd9478e947a172e00433, type: 3}
+  m_Name: Blood Trigger
+  m_EditorClassIdentifier: 
+  baseHasBeenFound: 0
+  baseHasBeenUsed: 0
+  hasBeenFound: 0
+  hasBeenUsed: 0

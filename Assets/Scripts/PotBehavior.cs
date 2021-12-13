@@ -50,6 +50,7 @@ public class PotBehavior : MonoBehaviour
         {
             //prevent the key from being found again
             key.GetComponent<KeyBehavior>().key.hasBeenFound = true;
+            light2D.enabled = false;
 
             //enable the key image in the UI
             key.GetComponent<Image>().enabled = true;
