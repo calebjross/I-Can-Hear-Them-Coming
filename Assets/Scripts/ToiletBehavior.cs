@@ -57,6 +57,7 @@ public class ToiletBehavior : MonoBehaviour
         {
             //moves the toilet
             transform.Translate(Vector3.right * 0.2f * Time.deltaTime);
+            toiletPosition.initialToiletPosition = new Vector2(17.6f, transform.localPosition.y);
         }
 
         //stops the toilet when it's moved to a specific spot
@@ -66,7 +67,6 @@ public class ToiletBehavior : MonoBehaviour
             transform.localPosition = new Vector2(17.6f,transform.localPosition.y);
 
             //sets the Vector2 stored in the scriptable object to the final position of the toilet
-            toiletPosition.initialToiletPosition = new Vector2(17.6f, transform.localPosition.y);
             isToiletMoving = false;
             GetComponent<BoxCollider2D>().enabled = false;
         }

@@ -1827,6 +1827,8 @@ MonoBehaviour:
   levelToLoadName: house-entrance
   playerPosition: {x: 10.2, y: -0.45}
   playerStorage: {fileID: 11400000, guid: 0c0807536a395fa42bf308eaeb929b28, type: 2}
+  cameraPosition: {x: 6.57, y: -0.45, z: -10}
+  cameraStorage: {fileID: 11400000, guid: 1c5852340154f7244bbe3a9cefdc3e9b, type: 2}
 --- !u!61 &168436729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5656,6 +5658,8 @@ MonoBehaviour:
   levelToLoadName: house-b2
   playerPosition: {x: -2, y: 1}
   playerStorage: {fileID: 11400000, guid: 0c0807536a395fa42bf308eaeb929b28, type: 2}
+  cameraPosition: {x: 0.9, y: 1.5, z: -10}
+  cameraStorage: {fileID: 11400000, guid: 1c5852340154f7244bbe3a9cefdc3e9b, type: 2}
 --- !u!61 &514078413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5757,11 +5761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_RootOrder
@@ -5769,19 +5773,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5821,11 +5825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 270
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 202
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 112403233821768731, guid: f0b5f7fdcf38cad4c887a39ccba51c95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7196,6 +7200,10 @@ PrefabInstance:
       propertyPath: minPosition.y
       value: 1.03
       objectReference: {fileID: 0}
+    - target: {fileID: 9069869318756386957, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c5852340154f7244bbe3a9cefdc3e9b, type: 2}
     - target: {fileID: 9069869318756386958, guid: 2f4a8c9782dd4104aa9f83a306feb3ab, type: 3}
       propertyPath: m_Name
       value: Main Camera

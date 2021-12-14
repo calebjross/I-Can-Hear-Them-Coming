@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 
@@ -12,6 +11,9 @@ public class LevelTrigger : MonoBehaviour
     public string levelToLoadName;
     public Vector2 playerPosition;
     public VectorValue playerStorage;
+
+    public Vector3 cameraPosition;
+    public VectorValue cameraStorage;
 
     LevelChanger levelChanger;
 
@@ -35,6 +37,7 @@ public class LevelTrigger : MonoBehaviour
         if (other.CompareTag("Player") && !other.isTrigger)
         {
             playerStorage.initialPlayerPosition = playerPosition;
+            cameraStorage.initialCameraPosition = cameraPosition;
             levelChanger.FadeToLevel(levelToLoadName);
             
         }

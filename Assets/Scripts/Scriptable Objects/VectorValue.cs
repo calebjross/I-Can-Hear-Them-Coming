@@ -18,6 +18,9 @@ public class VectorValue : ScriptableObject
     private Vector2 baseInitialToiletPosition = new Vector2(16.46f, -7.66f);
     public Vector2 initialToiletPosition;
 
+    //camera position
+    public Vector3 initialCameraPosition;
+
     private void OnEnable()
     {
         hideFlags = HideFlags.DontUnloadUnusedAsset;
@@ -29,6 +32,7 @@ public class VectorValue : ScriptableObject
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             initialPlayerPosition = baseInitialPlayerPosition;
+            initialCameraPosition = new Vector3(10.18f,-8.87f, -10f);
         }
     }
 

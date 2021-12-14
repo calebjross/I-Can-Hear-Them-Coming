@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 
@@ -18,6 +19,8 @@ public class CameraMovement : MonoBehaviour
     public Vector2 maxPosition;
     public Vector2 minPosition;
 
+    public VectorValue cameraPosition;
+
 
     #endregion
 
@@ -32,10 +35,15 @@ public class CameraMovement : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        smoothing = 0.1f;
-
         //set the position of the camera to the player at the start of the scene
-        transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+        transform.position = cameraPosition.initialCameraPosition;
+
+        smoothing = 0.1f;
+    }
+
+    private void Update()
+    {
+        Debug.Log(transform.position);
     }
 
     void LateUpdate()
