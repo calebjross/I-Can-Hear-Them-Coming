@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialPlayerPosition: {x: 0, y: 0}
   initialToiletPosition: {x: 16.46, y: -7.66}
-  initialCameraPosition: {x: 0, y: 0, z: 0}
+  initialCameraPosition: {x: -50.5, y: -7.9, z: -10}
