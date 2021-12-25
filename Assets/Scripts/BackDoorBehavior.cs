@@ -43,6 +43,7 @@ public class BackDoorBehavior : MonoBehaviour
             {
                 sr.enabled = false;
                 doorState.doorHasBeenOpened = true;
+                AudioManager.Play(AudioClipName.OpenDoor, 1f);
             }
         }
     }

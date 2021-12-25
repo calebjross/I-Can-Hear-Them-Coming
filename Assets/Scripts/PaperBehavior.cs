@@ -25,6 +25,8 @@ public class PaperBehavior : MonoBehaviour
     //indicates that the note has been read by the player
     public bool isRead;
 
+    public bool useAlternateSound;
+
     #endregion
 
     #region Properties
@@ -72,6 +74,7 @@ public class PaperBehavior : MonoBehaviour
         if (dialogBox.activeInHierarchy)
         {
             dialogBox.SetActive(false);
+            PlayCloseSound();
         }
     }
 
@@ -82,13 +85,33 @@ public class PaperBehavior : MonoBehaviour
             if (dialogBox.activeInHierarchy)
             {
                 dialogBox.SetActive(false);
+                PlayCloseSound();
             } else
             {
                 dialogBox.SetActive(true);
                 GetLetterText();
                 dialogText.text = dialog;
                 isRead = true;
+                PlayOpenSound();
             }
+        }
+    }
+
+    void PlayOpenSound()
+    {
+        if (useAlternateSound == true)
+        {
+            AudioManager.Play(AudioClipName.AlternateOpenClose, 0.5f);
+        }
+        else
+            AudioManager.Play(AudioClipName.PaperOpen, .6f);
+    }
+
+    void PlayCloseSound()
+    {
+        if (useAlternateSound == false)
+        {
+            AudioManager.Play(AudioClipName.PaperClose, .6f);
         }
     }
 
@@ -100,7 +123,7 @@ public class PaperBehavior : MonoBehaviour
                 dialog = "I cannot succumb. I won't succumb.";
                 break;
             case 2:
-                dialog = "Max, if you are reading this, that means I’ve gone into hiding." +
+                dialog = "Henry, if you are reading this, that means I’ve gone into hiding." +
                     " I can hear them at the door. Find me.";
                 break;
             case 3:
@@ -122,7 +145,7 @@ public class PaperBehavior : MonoBehaviour
                 dialog = "They are here.";
                 break;
             case 8:
-                dialog = "This way to the basement";
+                dialog = "Brick wall storage.";
                 break;
             case 9:
                 dialog = "If you are reading this, I might be gone already.";
@@ -131,10 +154,10 @@ public class PaperBehavior : MonoBehaviour
                 dialog = "If you are reading this, I might be (cough) out of cough drops.";
                 break;
             case 11:
-                dialog = "Please hurry. They won't leave until they taken what they want.";
+                dialog = "Please hurry. They won't leave until they've taken what they want.";
                 break;
             case 12:
-                dialog = "Sorry about all these notes on the floor. I can't find my tape.";
+                dialog = "Sorry about these notes just laying on the floor. I can't find my tape.";
                 break;
             case 13:
                 dialog = "I found my tape!";
@@ -143,7 +166,7 @@ public class PaperBehavior : MonoBehaviour
                 dialog = "WET PAINT";
                 break;
             case 15:
-                dialog = "Chili Pot and/or Key Container Storage Hall";
+                dialog = "Chili Pot/Key Container Storage Hall";
                 break;
             default:
                 dialog = "There is no text for this letter";

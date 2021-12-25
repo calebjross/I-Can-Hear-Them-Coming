@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/house-b2.unity
     guid: 7446f5fabc402b844b9aac87b201d7e4
+  - enabled: 1
+    path: Assets/_Scenes/outro.unity
+    guid: 5fb625888ff7c4f468ee5d3ab0a8064e
   m_configObjects: {}

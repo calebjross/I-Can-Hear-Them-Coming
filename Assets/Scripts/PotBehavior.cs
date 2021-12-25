@@ -54,6 +54,7 @@ public class PotBehavior : MonoBehaviour
 
             //enable the key image in the UI
             key.GetComponent<Image>().enabled = true;
+            AudioManager.Play(AudioClipName.KeyPickup, 1f);
 
             //allow the door to be unlocked
             key.GetComponent<KeyBehavior>().doorTheKeyGoesTo.GetComponentInChildren<OpenDoor>().isPlayerHasKey = true;

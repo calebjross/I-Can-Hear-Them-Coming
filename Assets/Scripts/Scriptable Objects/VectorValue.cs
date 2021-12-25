@@ -29,7 +29,7 @@ public class VectorValue : ScriptableObject
         initialToiletPosition = baseInitialToiletPosition;
 
         //set player position for scene 1
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 0)
         {
             initialPlayerPosition = baseInitialPlayerPosition;
             initialCameraPosition = new Vector3(10.18f,-8.87f, -10f);

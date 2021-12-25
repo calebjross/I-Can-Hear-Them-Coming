@@ -36,14 +36,12 @@ public class CameraMovement : MonoBehaviour
     void Awake()
     {
         //set the position of the camera to the player at the start of the scene
-        transform.position = cameraPosition.initialCameraPosition;
+        if (target != null)
+        {
+            transform.position = cameraPosition.initialCameraPosition;
+        }
 
         smoothing = 0.1f;
-    }
-
-    private void Update()
-    {
-        Debug.Log(transform.position);
     }
 
     void LateUpdate()

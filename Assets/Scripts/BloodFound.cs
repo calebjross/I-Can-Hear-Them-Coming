@@ -45,7 +45,7 @@ public class BloodFound : MonoBehaviour
         //configure idle timer
         idleTimer = gameObject.AddComponent<Timer>();
         bloodWaitTimer = gameObject.AddComponent<Timer>();
-        idleTimer.Duration = 0.5f;
+        idleTimer.Duration = 1f;
         bloodWaitTimer.Duration = 0.5f;
     }
 
@@ -57,6 +57,8 @@ public class BloodFound : MonoBehaviour
             animator.SetBool("moving", false);
             idleTimer.Run();
             pm.transform.GetChild(0).gameObject.SetActive(true);
+            AudioManager.StopPlay(AudioClipName.ForestBG);
+            AudioManager.Play(AudioClipName.HorrorStinger, 0.5f);
         }
     }
 
@@ -89,6 +91,7 @@ public class BloodFound : MonoBehaviour
     {
         if (other.tag == "Player" && bloodTriggerHasBeenTriggered.hasBeenUsed == false)
         {
+            AudioManager.Play(AudioClipName.ForestBGPostBlood, 1f, true);
             isArrivedAtBlood = true;
             animator.SetBool("moving", false);
             bloodWaitTimer.Run();

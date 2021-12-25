@@ -56,6 +56,7 @@ public class OpenDoor : MonoBehaviour
                 GameObject go = FindParentWithTag(gameObject, "Door");
                 SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
                 sr.enabled = false;
+                AudioManager.Play(AudioClipName.OpenDoor, 1f);
                 BoxCollider2D bc2d = go.GetComponent<BoxCollider2D>();
 
                 //fades the room in if the room is a hidden room
@@ -76,6 +77,8 @@ public class OpenDoor : MonoBehaviour
                     bc2d.enabled = false;
                 }
             }
+            else if (CheckIfDoorCanBeOpened() == false)
+                AudioManager.Play(AudioClipName.LockedDoor, 1f);
         }
     }
 

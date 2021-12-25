@@ -21,6 +21,10 @@ public class ToiletBehavior : MonoBehaviour
 
     public VectorValue toiletPosition;
 
+    bool isToiletAudioPlaying;
+
+    AudioSource audioSource;
+
     #endregion
 
     #region Properties
@@ -38,9 +42,13 @@ public class ToiletBehavior : MonoBehaviour
         light2D = GetComponent<Light2D>();
         light2D.enabled = false;
 
+        audioSource = GetComponent<AudioSource>();
+
         notes = GameObject.FindGameObjectsWithTag("Readable Paper");
 
         transform.localPosition = toiletPosition.initialToiletPosition;  //sets the toilet position to the Vector2 stored in the scriptable object
+
+        isToiletAudioPlaying = false;
     }
 
     /// <summary>
@@ -58,6 +66,7 @@ public class ToiletBehavior : MonoBehaviour
             //moves the toilet
             transform.Translate(Vector3.right * 0.2f * Time.deltaTime);
             toiletPosition.initialToiletPosition = new Vector2(17.6f, transform.localPosition.y);
+            PlayToiletAudio();
         }
 
         //stops the toilet when it's moved to a specific spot
@@ -69,6 +78,16 @@ public class ToiletBehavior : MonoBehaviour
             //sets the Vector2 stored in the scriptable object to the final position of the toilet
             isToiletMoving = false;
             GetComponent<BoxCollider2D>().enabled = false;
+            audioSource.Stop();
+        }
+    }
+
+    void PlayToiletAudio()
+    {
+        if (isToiletAudioPlaying == false)
+        {
+            isToiletAudioPlaying = true;
+            audioSource.Play();
         }
     }
 

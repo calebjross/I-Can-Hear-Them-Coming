@@ -75,5 +75,15 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidBody.MovePosition(transform.position + change.normalized * speed * Time.fixedDeltaTime);
     }
+
+    public void TakeStepA()
+    {
+        AudioManager.Play(AudioClipName.StepA, .3f);
+    }
+
+    public void TakeStepB()
+    {
+        AudioManager.Play(AudioClipName.StepB, .3f);
+    }
 }
     #endregion

@@ -35,7 +35,7 @@ public class LightBehavior : MonoBehaviour
         //access components for efficiency
         light2D = GetComponent<Light2D>();
 
-        growSpeed = 0.003f;
+        growSpeed = Random.Range(0.003f, 0.009f);
 
         isGrowing = true;
 
