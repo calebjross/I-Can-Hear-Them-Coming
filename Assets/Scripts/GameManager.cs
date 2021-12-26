@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") && Application.isPlaying == false)
         {
             Application.Quit();
         }
