@@ -133,9 +133,9 @@ public class PaperBehavior : MonoBehaviour
                 dialog = "Use as emergency regular paper.";
                 break;
             case 5:
-                dialog = "To do: \n" +
-                    "1. Throw away the bad chili from last night. It tastes like metal. \n" +
-                    "2. Find the bathroom key...very soon. Even bad chili still does chili stuff. \n" +
+                dialog = "To do: \n\n" +
+                    "1. Throw away the bad chili from last night. It tastes like metal. \n\n" +
+                    "2. Find the bathroom key...very soon. Even bad chili still does chili stuff. \n\n" +
                     "3. Buy new pants";
                 break;
             case 6:
